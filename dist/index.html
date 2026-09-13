@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>하루 — 2026 캘린더</title>
+  <meta name="description" content="2026년, 하루하루를 채우는 나만의 달력과 할 일 목록">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%23ed6b35'/%3E%3Cpath d='M9 10h14v14H9zM9 14h14' fill='none' stroke='white' stroke-width='2'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
+  <link rel="stylesheet" href="style.css"><script src="app.js" defer></script>
+</head>
+<body>
+  <aside class="sidebar">
+    <a class="brand" href="./" aria-label="하루 홈"><span class="brand-mark">h.</span>하루<span class="brand-period">.</span></a>
+    <div class="sidebar-caption">MY PERSONAL SPACE</div>
+    <div class="nav-active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="4" y="5" width="16" height="16" rx="3"/><path d="M8 3v4m8-4v4M4 11h16"/></svg>나의 캘린더</div>
+    <div class="year-label"><span>2026년</span><span class="tiny-label">12 MONTHS</span></div>
+    <nav id="months" class="months" aria-label="월 선택"></nav>
+    <div class="sidebar-bottom"><div class="small-line"></div><p>작은 계획이 모여<br>나의 하루가 됩니다.</p><span>MAKE ROOM FOR YOUR DAY</span></div>
+  </aside>
+  <main>
+    <header class="topbar"><div>나의 캘린더 <span>/</span> <b>2026</b></div><div class="local-badge"><i></i>나만의 공간</div></header>
+    <section class="page-heading"><div><div class="eyebrow">A LITTLE PLAN, A BETTER DAY</div><h1>하루를 차근차근.</h1><p>오늘의 할 일을 정리하고, 나만의 속도로 채워보세요.</p></div><button id="today" class="today-button">오늘로 이동 <span>↗</span></button></section>
+    <div class="workspace">
+      <section class="calendar-panel" aria-label="2026년 달력">
+        <div class="calendar-heading"><div><span class="month-overline">2026</span><h2 id="month-title"></h2></div><div class="month-navigation"><button id="previous" aria-label="이전 달">‹</button><button id="next" aria-label="다음 달">›</button></div></div>
+        <div class="weekdays"><span>일</span><span>월</span><span>화</span><span>수</span><span>목</span><span>금</span><span>토</span></div>
+        <div id="calendar" class="calendar-grid"></div>
+        <div class="calendar-footer"><span><i class="legend-dot"></i>할 일이 있는 날</span><span>날짜를 선택해 하루를 계획하세요</span></div>
+      </section>
+      <aside class="todo-panel">
+        <div class="todo-date-heading"><div class="eyebrow">YOUR DAILY PLAN</div><div class="date-title-row"><h2 id="selected-title"></h2><span id="day-label"></span></div><p id="date-caption"></p></div>
+        <div class="progress-heading"><span>오늘의 달성률</span><b id="progress-text">0%</b></div><div class="progress-track"><div id="progress-bar"></div></div>
+        <div class="list-heading"><h3>할 일 <span id="todo-count">0</span></h3><span id="completed-count">0개 완료</span></div>
+        <form id="todo-form"><label class="sr-only" for="todo-input">새로운 할 일</label><input id="todo-input" maxlength="150" autocomplete="off" placeholder="새로운 할 일을 적어보세요"><button type="submit" aria-label="할 일 추가">+</button></form>
+        <div id="todo-list" class="todo-list"></div>
+        <div class="todo-bottom"><span class="save-dot"></span><span id="save-status" role="status">이 브라우저에 자동으로 저장됩니다</span></div>
+      </aside>
+    </div>
+    <footer class="page-footer"><span>하루하루, 조금씩 앞으로.</span><span>2026 · YOUR YEAR, YOUR PACE</span></footer>
+  </main>
+</body>
+</html>
